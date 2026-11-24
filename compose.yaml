@@ -1,0 +1,23 @@
+name: democraxssy
+services:
+  api:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      PORT: "3000"
+      DB_PATH: /app/data/democraxssy.db
+      CORS_ORIGIN: ${CORS_ORIGIN:?Indique el origen del frontend}
+      PARTIDA_TTL_HORAS: ${PARTIDA_TTL_HORAS:-24}
+      TAM_MANO: ${TAM_MANO:-7}
+    volumes:
+      - partidas:/app/data
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/salud').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      start_period: 5s
+      retries: 3
+volumes:
+  partidas:
