@@ -8,7 +8,7 @@ services:
     environment:
       PORT: "3000"
       DB_PATH: /app/data/democraxssy.db
-      CORS_ORIGIN: ${CORS_ORIGIN:?Indique el origen del frontend}
+      CORS_ORIGIN: "${CORS_ORIGIN:-*}"
       PARTIDA_TTL_HORAS: ${PARTIDA_TTL_HORAS:-24}
       TAM_MANO: ${TAM_MANO:-7}
     volumes:

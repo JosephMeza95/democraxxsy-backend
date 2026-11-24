@@ -58,7 +58,7 @@ cd ~/democraxxsy-backend
 vi .env
 ```
 
-Agregá o actualizá la línea `CORS_ORIGIN=http://150.230.169.80`. En vi, presioná **i** para editar y luego **Esc**, **:wq**, **Enter** para guardar. El origen corresponde al frontend que abren los jugadores y se escribe sin barra final. Usá el compose.yaml de esta entrega. Si antes preparaste un compose.override.yaml para Caddy, usá explícitamente `-f compose.yaml` como en los comandos siguientes.
+Agregá o actualizá la línea `CORS_ORIGIN=*` para permitir que los frontends de todos los grupos usen la API desde el navegador. Si seguiste la versión anterior de la guía, reemplazá el valor que apuntaba a una sola IP. En vi, presioná **i** para editar y luego **Esc**, **:wq**, **Enter** para guardar. Usá el compose.yaml de esta entrega. Si antes preparaste un compose.override.yaml para Caddy, usá explícitamente `-f compose.yaml` como en los comandos siguientes.
 
 ```bash
 sudo docker compose -f compose.yaml config --quiet
@@ -145,15 +145,15 @@ Desde PowerShell, con la variable $VmIp del paso 3:
 curl.exe -i "http://$VmIp/api/salud"
 curl.exe -I "https://$VmIp/api/salud"
 curl.exe -i "https://$VmIp/api/salud"
-curl.exe -i -X OPTIONS "https://$VmIp/api/partidas" -H "Origin: http://150.230.169.80" -H "Access-Control-Request-Method: PUT" -H "Access-Control-Request-Headers: authorization,content-type"
+curl.exe -i -X OPTIONS "https://$VmIp/api/partidas" -H "Origin: https://otro-grupo.example" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: authorization,content-type"
 ```
 
-Esperá 200 en salud, certificado aceptado por tu equipo y 204 en OPTIONS con el origen del frontend, PUT y las cabeceras solicitadas. Usá la validación normal del navegador y curl.
+Esperá 200 en salud, certificado aceptado por tu equipo y 204 en OPTIONS con `Access-Control-Allow-Origin: *`, POST y las cabeceras solicitadas. El dominio de ejemplo simula otro origen. Para verificar la integración real, abrí el frontend de otro grupo, seleccioná esta API por HTTPS, creá una sala y consultá la mano con el token del jugador.
 
 1. Abrí `http://150.230.169.80/`. Para demostrar HTTP seleccioná `http://IP_BACKEND` y verificá salud con una sesión de prueba. Para la partida seleccioná **https://IP_BACKEND** en cada dispositivo, sin puerto ni /api.
 2. Usá cuatro dispositivos, navegadores o perfiles independientes. El anfitrión crea una partida a dos puntos, comparte el ID, los otros tres se unen e inicia el juego. Registrá las solicitudes en la pestaña Red del navegador.
 3. Los participantes envían respuestas y votos; el soberano decide. Avanzá tras la primera ronda. Cuando alguien alcance la meta, esperá a que todos vean el resultado antes de que el anfitrión finalice. Registrá los estados de crear/unirse (201), consultar/iniciar/responder/votar/decidir/avanzar (200) y eliminar (204). Ocultá los tokens al compartir evidencias.
-4. Cuando el frontend vuelva a HTTPS, cambiá su origen en .env a `CORS_ORIGIN=https://150.230.169.80`. Aplicá con `sudo docker compose -f compose.yaml up -d --wait` y repetí OPTIONS con el nuevo origen. En la revisión final usá HTTPS para ambas capas. Un frontend servido por HTTPS normalmente bloquea llamadas a una API HTTP pública.
+4. Cuando el frontend vuelva a HTTPS, conservá `CORS_ORIGIN=*`. En la revisión final usá HTTPS para ambas capas. Un frontend servido por HTTPS normalmente bloquea llamadas a una API HTTP pública.
 
 ## 8. Actualizar y comprobar persistencia
 
