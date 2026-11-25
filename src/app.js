@@ -15,8 +15,6 @@ export function crearApp(db) {
   app.use(cabecerasSeguras);
   app.use(express.json({ limit: '10kb' }));
 
-  // HEAD /api/salud lo usa el botón "Verificar servidor" del frontend.
-  // Express responde HEAD automáticamente con la ruta GET.
   app.get('/api/salud', (req, res) => res.json({ estado: 'ok' }));
   app.use('/api/partidas', crearRutasPartidas(db));
 
