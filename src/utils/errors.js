@@ -1,4 +1,3 @@
-// Error con código HTTP. El frontend lee el campo "error" del JSON y lo muestra tal cual.
 export class ApiError extends Error {
   constructor(status, message) {
     super(message);

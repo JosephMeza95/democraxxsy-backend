@@ -10,7 +10,6 @@ const servidor = app.listen(config.port, config.host, () => {
   console.log(`DemocraXSSy escuchando en http://${config.host}:${config.port}`);
 });
 
-// Limpieza periódica de partidas abandonadas.
 const ttlMs = config.partidaTtlHoras * 60 * 60 * 1000;
 const limpieza = setInterval(() => {
   const borradas = limpiarPartidasInactivas(db, ttlMs);

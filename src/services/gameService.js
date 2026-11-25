@@ -1,5 +1,4 @@
-// Lógica del juego. Cada función pública corre en UNA transacción de SQLite
-// (better-sqlite3 es síncrono), así que dos peticiones nunca se mezclan a medias.
+
 import { config, reglas } from '../config.js';
 import {
   badRequest,
@@ -9,7 +8,6 @@ import {
 } from '../utils/errors.js';
 import {
   elegirUno,
-  hashToken,
   mezclar,
   nuevoIdJugador,
   nuevoIdPartida,
@@ -20,8 +18,6 @@ import { validarNombre, validarPuntos, validarCartas } from '../utils/validate.j
 
 const ahora = () => Date.now();
 const HUECO = /_{3,}/g;
-
-// ───────────────────────── Consultas auxiliares ─────────────────────────
 
 function obtenerPartida(db, partidaId) {
   const partida = db.prepare('SELECT * FROM partidas WHERE id = ?').get(partidaId);
@@ -47,7 +43,6 @@ function rondaActual(db, partida) {
 const tocarPartida = (db, partidaId) =>
   db.prepare('UPDATE partidas SET actualizada_en = ? WHERE id = ?').run(ahora(), partidaId);
 
-/** Rellena los huecos "____" de la carta negra con las cartas elegidas, en orden. */
 export function armarFrase(textoNegra, textosBlancos) {
   const restantes = [...textosBlancos];
   let frase = textoNegra.replace(HUECO, () => restantes.shift() ?? '____');
@@ -58,15 +53,14 @@ export function armarFrase(textoNegra, textosBlancos) {
   return frase;
 }
 
-// ───────────────────────── Crear y unirse ─────────────────────────
 
 function insertarJugador(db, partidaId, nombre, orden) {
   const id = nuevoIdJugador();
   const token = nuevoToken();
   db.prepare(
-    `INSERT INTO jugadores (id, partida_id, nombre, token_hash, orden, creado_en)
+    `INSERT INTO jugadores (id, partida_id, nombre, token, orden, creado_en)
      VALUES (?, ?, ?, ?, ?, ?)`,
-  ).run(id, partidaId, nombre, hashToken(token), orden, ahora());
+  ).run(id, partidaId, nombre, token, orden, ahora());
   return { jugadorId: id, token };
 }
 
@@ -112,7 +106,6 @@ export function unirse(db, partidaId, { nombre }) {
   })();
 }
 
-// ───────────────────────── Mazo y manos ─────────────────────────
 
 function reciclarDescarte(db, partidaId) {
   const descarte = db
@@ -350,7 +343,6 @@ export function votar(db, partidaId, actor, { respuesta_id }) {
       .get(respuesta_id, ronda.id);
     if (!existe) throw badRequest('Seleccioná una de las respuestas de esta ronda.');
 
-    // Se puede votar por la respuesta propia (lo permite la API).
     db.prepare(
       'INSERT INTO votos (ronda_id, jugador_id, respuesta_id, creado_en) VALUES (?, ?, ?, ?)',
     ).run(ronda.id, actor.id, respuesta_id, ahora());
@@ -375,7 +367,6 @@ export function decidir(db, partidaId, actor, { respuesta_id }) {
       .get(respuesta_id, ronda.id);
     if (!elegida) throw badRequest('Seleccioná una de las respuestas de esta ronda.');
 
-    // El soberano puede elegir cualquiera; solo se anota si respetó al pueblo.
     const { favoritas } = contarVotos(db, ronda.id);
     const respeto = favoritas.length === 0 || favoritas.includes(elegida.id) ? 1 : 0;
 

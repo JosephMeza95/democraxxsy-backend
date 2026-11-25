@@ -7,7 +7,6 @@ const aquí = dirname(fileURLToPath(import.meta.url));
 const leerJson = (archivo) =>
   JSON.parse(readFileSync(resolve(aquí, '../data', archivo), 'utf8'));
 
-// Abre la base, crea las tablas y carga el catálogo de cartas (idempotente).
 export function abrirBaseDeDatos(ruta) {
   if (ruta !== ':memory:') {
     mkdirSync(dirname(resolve(ruta)), { recursive: true });

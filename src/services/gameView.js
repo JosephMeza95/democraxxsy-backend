@@ -1,4 +1,3 @@
-// Construye el JSON "GameView" que espera el frontend (ver src/types.ts del frontend).
 import { contarVotos } from './gameService.js';
 
 export function construirVista(db, partidaId, actor) {
