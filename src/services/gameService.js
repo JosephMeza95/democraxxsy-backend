@@ -194,8 +194,7 @@ function elegirCartaNegra(db, partidaId) {
 
 function comenzarRonda(db, partida, numero) {
   const jugadores = jugadoresDe(db, partida.id);
-
-  // Las cartas jugadas en la ronda anterior se descartan y todos recuperan su mano.
+  
   db.prepare(
     `UPDATE partida_cartas_blancas SET estado = 'descarte', jugador_id = NULL
       WHERE partida_id = ? AND estado = 'jugada'`,
@@ -242,8 +241,6 @@ export function contarVotos(db, rondaId) {
   return { porRespuesta, favoritas };
 }
 
-// ───────────────────────── Acciones ─────────────────────────
-
 export function iniciar(db, partidaId, actor) {
   return db.transaction(() => {
     const partida = obtenerPartida(db, partidaId);
@@ -260,7 +257,6 @@ export function iniciar(db, partidaId, actor) {
     }
 
     const totalBlancas = armarMazo(db, partidaId);
-    // Debe alcanzar para las manos y para las respuestas en mesa (hasta 2 cartas c/u).
     const posible = Math.floor((totalBlancas - (n - 1) * 2) / n);
     const tamMano = Math.max(2, Math.min(config.tamManoMax, posible));
     db.prepare('UPDATE partidas SET tam_mano = ? WHERE id = ?').run(tamMano, partidaId);
