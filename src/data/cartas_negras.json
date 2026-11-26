@@ -1,43 +1,590 @@
 [
-  { "texto": "Lo que de verdad frena al país no es la deuda, es ____.", "elegir": 1 },
-  { "texto": "Mi plan de gobierno se resume en una palabra: ____.", "elegir": 1 },
-  { "texto": "Ayer, en conferencia de prensa, el presidente confesó que todo fue culpa de ____.", "elegir": 1 },
-  { "texto": "¿Qué le pone el toque especial a cualquier reunión de Teams? ____.", "elegir": 1 },
-  { "texto": "Mi mamá dice que si sigo con ____ me voy a quedar solo para siempre.", "elegir": 1 },
-  { "texto": "Nueva ley aprobada de urgencia: queda prohibido ____ en horas laborales.", "elegir": 1 },
-  { "texto": "El diputado rompió el silencio: «No voy a renunciar por culpa de ____».", "elegir": 1 },
-  { "texto": "¿Qué hay en el fondo del bolso de todo estudiante de Redes 2? ____.", "elegir": 1 },
-  { "texto": "Lo único que se arregla con una marcha de protesta es ____.", "elegir": 1 },
-  { "texto": "Hacienda anunció un nuevo impuesto a ____.", "elegir": 1 },
-  { "texto": "Tras doce horas de debate, el pueblo exigió ____.", "elegir": 1 },
-  { "texto": "En mi currículum, bajo «habilidades», puse ____.", "elegir": 1 },
-  { "texto": "La próxima campaña electoral va a prometer ____.", "elegir": 1 },
-  { "texto": "Mi terapeuta cree que mi verdadero problema es ____.", "elegir": 1 },
-  { "texto": "Lo más barato de la canasta básica es ____.", "elegir": 1 },
-  { "texto": "El soberano se levantó, tosió y dijo: «Mi decreto final es ____».", "elegir": 1 },
-  { "texto": "Nada une más a un pueblo dividido que ____.", "elegir": 1 },
-  { "texto": "La tarea de mañana: investigar todo sobre ____.", "elegir": 1 },
-  { "texto": "Cuando el servidor se cae, lo primero que se culpa es ____.", "elegir": 1 },
-  { "texto": "Rumores en el chat de la U: el profe va a evaluar ____.", "elegir": 1 },
-  { "texto": "¿Qué es lo primero que hace un político al llegar al poder?", "elegir": 1 },
-  { "texto": "¿Qué nos va a salvar de la crisis?", "elegir": 1 },
-  { "texto": "¿Cuál es el secreto de la felicidad nacional?", "elegir": 1 },
-  { "texto": "¿Qué se escucha detrás de la puerta cerrada del Congreso?", "elegir": 1 },
-  { "texto": "¿Qué le echaron al gallo pinto de la soda esta mañana?", "elegir": 1 },
-  { "texto": "Para ganar las elecciones, mi partido promete ____ y ____.", "elegir": 2 },
-  { "texto": "Hoy en el noticiero: ____ provoca ____.", "elegir": 2 },
-  { "texto": "Mi plan de vida: primero ____, después ____.", "elegir": 2 },
-  { "texto": "El nuevo tratado internacional obliga a intercambiar ____ por ____.", "elegir": 2 },
-  { "texto": "La reforma educativa cambia ____ por ____.", "elegir": 2 },
-  { "texto": "Alguien dejó el micrófono abierto en Teams y se escuchó ____ mientras ____.", "elegir": 2 },
-  { "texto": "Esta semana en el pueblo: ____ y ____.", "elegir": 2 },
-  { "texto": "Mi ex me dejó por ____ y, de paso, se llevó ____.", "elegir": 2 },
-  { "texto": "Para pasar Redes 2 solo hacen falta ____ y ____.", "elegir": 2 },
-  { "texto": "El soberano ordena: se prohíbe ____ y se subsidia ____.", "elegir": 2 },
-  { "texto": "Receta secreta de la abuela: una pizca de ____ con mucho ____.", "elegir": 2 },
-  { "texto": "El próximo escándalo nacional mezcla ____ con ____.", "elegir": 2 },
-  { "texto": "Primera plana: «____ arruina la fiesta de ____».", "elegir": 2 },
-  { "texto": "Entre ____ y ____, prefiero seguir durmiendo.", "elegir": 2 },
-  { "texto": "El pueblo no pide mucho: solo ____ y, si se puede, ____.", "elegir": 2 },
-  { "texto": "Mi ministerio invertirá millones en ____ para combatir ____.", "elegir": 2 }
+  {
+    "texto": "El grupo de la familia se quedó en silencio después de que alguien mandó ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La frase «esto promete» ahora significa ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "¿Qué ocupa cualquier conversación tica para volverse viral? ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El verdadero final de un audio que empieza con «mae, rapidito» es ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "En Marketplace, el significado secreto de «¿último precio?» es ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La tía mandó «buenos días» y el chat recibió ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El algoritmo de TikTok descubrió que mi personalidad completa es ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "¿Qué hace que un meme sea oficialmente patrimonio tico? ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La respuesta nacional a cualquier problema complicado es ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El compa dijo «fijo» y lo que quiso decir fue ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La captura de pantalla que nadie debía ver mostraba ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El en vivo se puso bueno cuando apareció ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El país entero escribió «pura vida» para ocultar ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "¿Qué significa realmente «ahorita llego»? ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El admin pidió no mandar cadenas y acto seguido mandó ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La polémica de Facebook se resolvió cuando alguien comentó ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El sticker perfecto para responderle al profe es ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La historia de Instagram decía «sin contexto», pero sí tenía ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "¿Qué le faltaba al tutorial tico para funcionar? ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El audio reenviado mil veces por fin reveló ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La frase «todo bien, todo bonito» se usa mejor cuando ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El chat de la U volvió a la vida solo para pedir ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "¿Qué convierte una presa de la General Cañas en contenido? ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La notificación que todo tico sí abre de inmediato es ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El profe preguntó quién hizo el trabajo y el chat contestó ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La foto pixelada igual se hizo viral porque mostraba ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La publicación decía «se vienen cositas» y las cositas eran ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El grupo de compra y venta aceptó como pago ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La Sele perdió, pero al menos internet nos dejó ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "¿Qué frase tica debería aparecer en todos los comentarios? ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La Mop que promete llegó al chat para anunciar ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El «mae, vea esto» terminó siendo ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El SINPE llegó con el concepto más sospechoso de la historia: ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La indirecta de estado de WhatsApp era claramente sobre ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El comentario «fuente: créame, mop» confirmó ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El streamer preguntó «¿me escuchan?» y el chat respondió ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El giveaway tenía 48 requisitos y el premio era ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El nuevo «buenos días» del chat familiar viene acompañado de ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La única forma de sobrevivir al chat de WhatsApp es ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "Hoy en redes: ____ se hizo viral por ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El audio de ____ empezó con «mae, rapidito» y terminó en ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "En Marketplace ofrecieron ____ a cambio de ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "La tía mandó ____ y el sobrino respondió con ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "La frase «esto promete» anunció ____ y entregó ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El chat de la U pidió ____; el único que apareció llevó ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "La Sele puso ____ en la cancha y TikTok puso ____ en los comentarios.",
+    "elegir": 2
+  },
+  {
+    "texto": "Un «ahorita llego» tico puede durar ____ o ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El en vivo se cayó justo cuando ____ iba a revelar ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El admin prohibió ____ y fijó ____ como nueva regla del grupo.",
+    "elegir": 2
+  },
+  {
+    "texto": "La captura mostraba ____; el mensaje borrado decía ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El influencer prometió ____ y entregó ____ en un reel de quince segundos.",
+    "elegir": 2
+  },
+  {
+    "texto": "La presa empezó con ____ y terminó convertida en ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El SINPE decía ____; la explicación que mandaron fue ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El sticker de ____ respondió perfectamente a ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El algoritmo me recomendó ____ después de que busqué ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "La publicación decía «sin contexto»; el contexto era ____ y ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El grupo familiar convirtió ____ en ____ antes del desayuno.",
+    "elegir": 2
+  },
+  {
+    "texto": "La Mop que promete vio ____ y dijo que eso sí era ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El compa escribió «fijo» para ____ y terminó haciendo ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "Un «pura vida» escondía ____; un «diay» confirmó ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "Para hacerse viral en Costa Rica solo se necesita ____ y ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El video de ____ llegó al grupo de la familia junto con ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El giveaway pedía ____ y ofrecía ____ como gran premio.",
+    "elegir": 2
+  },
+  {
+    "texto": "La story decía «se vienen cositas»; las cositas eran ____ y ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El chat pidió ____; el que siempre dice «ahí voy» apareció con ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "Un meme de ____ arregló ____ mejor que cualquier comunicado oficial.",
+    "elegir": 2
+  },
+  {
+    "texto": "El video empezó con «mae, no me queme» y terminó mostrando ____ y ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "La conversación iba por ____ hasta que alguien mandó ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El país comentó ____ mientras esperaba ____.",
+    "elegir": 2
+  },
+  {
+    "elegir": 2,
+    "texto": "El presupuesto 2027 llegó al plenario con ____ y salió con ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La comisión prometió resolver ____ antes de que ____ se convierta en patrimonio nacional."
+  },
+  {
+    "elegir": 2,
+    "texto": "En sesiones extraordinarias, el país esperaba ____ y recibió ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La conferencia anunció ____; la respuesta a las preguntas fue ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La campaña prometió ____; la realidad entregó ____ y una presa de regalo."
+  },
+  {
+    "elegir": 2,
+    "texto": "El debate se suspendió por ____ y se reanudó con ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La moción buscaba ____; el receso terminó en ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "Para arreglar la política nacional hacen falta ____ y, sobre todo, ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La comisión investigó ____ hasta descubrir ____ en el orden del día."
+  },
+  {
+    "elegir": 2,
+    "texto": "El anuncio de obra pública incluyó ____; la fecha de entrega decía ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La oposición pidió ____; el oficialismo respondió con ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "El pueblo pidió cuentas; el plenario contestó con ____ y ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "El político dijo «por el pueblo» mientras ____ y ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La Sala Constitucional mandó ____; el chat político entendió ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "El plan para reducir la presa consistía en ____ y ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "En la primera cita hablamos de ____; en la segunda, de ____ y ya no hubo tercera."
+  },
+  {
+    "elegir": 2,
+    "texto": "Mi ex volvió con ____ y una promesa de ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La noche se puso interesante cuando alguien propuso ____ y otro dijo ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La frase «solo una birrita» terminó en ____ y ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "El ligue dijo «yo fluyo»; yo entendí ____ y terminé ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La sesión extraordinaria empezó con ____ y acabó con ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "El comunicado oficial aclaró ____ sin explicar ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La promesa de campaña venía con ____; las letras pequeñas decían ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "En Costa Rica, cualquier problema nacional se resuelve con ____ y ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "El casi algo pidió ____ justo cuando yo estaba ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "El «no estoy celoso» venía acompañado de ____ y ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "El proyecto pasó meses en comisión esperando ____ y ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La votación se puso más intensa que ____ cuando apareció ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La negociación avanzó gracias a ____ y a una cantidad sospechosa de ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La frase «estamos valorando opciones» traduce ____ y ____."
+  },
+  {
+    "elegir": 1,
+    "texto": "El audio empezó con «vea yogurt» y terminó explicando ____."
+  },
+  {
+    "elegir": 1,
+    "texto": "Una birra económica, cerveza; y de acompañamiento, ____."
+  },
+  {
+    "elegir": 1,
+    "texto": "«Mop, la mía era la más...»; el chat completó la frase con ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La versión limpia del audio decía ____; la versión del grupo decía ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "El audio viral sonó en la sala justo cuando ____ y ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "Todo el mundo entendió «vea yogurt»; nadie pudo explicar ____ ni ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "El compa citó el audio de la birra para pedir ____ y terminó ofreciendo ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "El remate censurado se reemplazó por ____ y una cantidad preocupante de ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "El audio tico se volvió patrimonio nacional gracias a ____ y ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "La abuela oyó «mop, la mía era la más...» y preguntó si ____ o ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "El remix de «vea yogurt» mezcló ____ con ____."
+  },
+  {
+    "elegir": 2,
+    "texto": "Para que el audio fuera apto para todo público, cambiamos ____ por ____."
+  },
+  {
+    "texto": "¡Nombres, va volando todo! Yo agarré ____ y jalé con ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "La que prometía era ____; yo ya le había metido ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "Andaba en bloomer, me cerré la sueta y salí con ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "Yo dije «rápido, rápido», pero antes tenía que explicar ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La rasta era la mía, mop: la había pintado con ____ y ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "Agarré a las guilas, el celular y ____; lo demás que esperara.",
+    "elegir": 1
+  },
+  {
+    "texto": "Casi saco todo, pero olía a ____ y terminé jalando con ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El plan era terminar la rasta con ____; el plan terminó en ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "«La mía era la primera, la rasta mop»; lo que más prometía era ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "Todo pasó rapidísimo, rapidísimo; lo único que quedó para después fue ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "Pedí el sarpe para irme; terminé ____ con ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "Yo dije «una y jalo», pero apareció ____ y luego ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El compa juraba que estaba bien; lo delató ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La despedida del chante duró ____ y ocupó ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "La canción del sarpe sonó y de pronto todo mundo ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El último guaro de la noche se convirtió en ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "Al día siguiente, la goma me recordó ____ y ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El plan era tomar suave; el resultado fue ____ con ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "«Ya jalo», dije yo, mientras todavía ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El chante cerraba, pero el grupo seguía discutiendo ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El debate nacional quedó resumido en ____ y un gesto de ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "La conferencia empezó con preguntas sobre seguridad y acabó con ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El «lero, lero» político terminó convertido en ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "Los apóstoles del gobierno salieron a defender ____ como si ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "La presidenta explicó ____ con una conchería que ocupó ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "La oposición preguntó por ____ y recibió de vuelta ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "En el plenario, lo que más avanzó fue ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "La rueda de prensa dejó más ____ que ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "La inauguración del CACCO sorprendió por ____ y ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "La continuidad del gobierno significa ____ para ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El pueblo soberano pidió ____; la conferencia respondió ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El ministro dijo ____ y el chat entendió ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "La comisión discute ____ mientras todo el país pregunta por ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El nuevo apodo oficial para cualquier pregunta incómoda es ____.",
+    "elegir": 1
+  },
+  {
+    "texto": "El debate terminó con ____ y el proyecto todavía en ____.",
+    "elegir": 2
+  },
+  {
+    "texto": "El «lero, lero» de Rodrigo Chaves terminó con ____ y ____.",
+    "elegir": 2
+  }
 ]
